@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  nome = 'erica';
-  idade = 27;
 }
