@@ -1,18 +1,3 @@
-body { min-block-size: 100vh }
-
-img { display: block; max-inline-size: 100%; }
-
-/*
-
-coloquei acima uma dica que encontrei no linkedin, não é do curso, mas implementei para já testar :)
-
-"É útil fazer com que o corpo ocupe toda a janela de visualização,
-mesmo que seu conteúdo não o faça.
-
-Definir max-inline-size como 100% torna nossas imagens responsivas por padrão e trata as imagens como elementos de nível de bloco, que é como a maioria das pessoas usa as img tags."
-
-*/
-
 .header {
     padding: 5px 20px;
 }
