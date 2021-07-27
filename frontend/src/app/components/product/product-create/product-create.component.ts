@@ -9,9 +9,10 @@ import { Product } from "../product.model";
   styleUrls: ["./product-create.component.css"],
 })
 export class ProductCreateComponent implements OnInit {
+
   product: Product = {
-    name: "Produto de teste",
-    price: 123.45,
+    name: '',
+    price: null
   };
 
   constructor(private productService: ProductService, private router: Router) {}
