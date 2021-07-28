@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Caneta BIC Preta",
+      "name": "Caneta BIC Preta ",
       "price": 5.89
     },
     {
@@ -29,6 +29,11 @@
       "name": "Mouse sem fio HP",
       "price": 56.23,
       "id": 6
+    },
+    {
+      "name": "teste",
+      "price": "534534",
+      "id": 8
     }
   ]
 }
