@@ -14,6 +14,8 @@ import { ProductCrudComponent } from "./views/product-crud/product-crud.componen
 import { RedDirective } from "./directives/red.directive";
 import { ForDirective } from "./directives/for.directive";
 import { ProductCreateComponent } from "./components/product/product-create/product-create.component";
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductReadNovoComponent } from './components/product/product-read-novo/product-read-novo.component';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
@@ -23,8 +25,6 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { ProductReadComponent } from './components/product/product-read/product-read.component';
-import { ProductReadNovoComponent } from './components/product/product-read-novo/product-read-novo.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';

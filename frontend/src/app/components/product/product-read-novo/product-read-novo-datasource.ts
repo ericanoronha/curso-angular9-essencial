@@ -1,37 +1,32 @@
+import { Product } from './../product.model';
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
-// TODO: Replace this with your own data model type
-export interface ProductReadNovoItem {
-  name: string;
-  id: number;
-}
-
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: ProductReadNovoItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+const EXAMPLE_DATA: Product[] = [
+  {id: 1, name: 'Hydrogen', price: 123.45},
+  {id: 2, name: 'Helium', price: 123.45},
+  {id: 3, name: 'Lithium', price: 123.45},
+  {id: 4, name: 'Beryllium', price: 123.45},
+  {id: 5, name: 'Boron', price: 123.45},
+  {id: 6, name: 'Carbon', price: 123.45},
+  {id: 7, name: 'Nitrogen', price: 123.45},
+  {id: 8, name: 'Oxygen', price: 123.45},
+  {id: 9, name: 'Fluorine', price: 123.45},
+  {id: 10, name: 'Neon', price: 123.45},
+  {id: 11, name: 'Sodium', price: 123.45},
+  {id: 12, name: 'Magnesium', price: 123.45},
+  {id: 13, name: 'Aluminum', price: 123.45},
+  {id: 14, name: 'Silicon', price: 123.45},
+  {id: 15, name: 'Phosphorus', price: 123.45},
+  {id: 16, name: 'Sulfur', price: 123.45},
+  {id: 17, name: 'Chlorine', price: 123.45},
+  {id: 18, name: 'Argon', price: 123.45},
+  {id: 19, name: 'Potassium', price: 123.45},
+  {id: 20, name: 'Calcium', price: 123.45},
 ];
 
 /**
@@ -39,8 +34,8 @@ const EXAMPLE_DATA: ProductReadNovoItem[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class ProductReadNovoDataSource extends DataSource<ProductReadNovoItem> {
-  data: ProductReadNovoItem[] = EXAMPLE_DATA;
+export class ProductReadNovoDataSource extends DataSource<Product> {
+  data: Product[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -53,7 +48,7 @@ export class ProductReadNovoDataSource extends DataSource<ProductReadNovoItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<ProductReadNovoItem[]> {
+  connect(): Observable<Product[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -77,7 +72,7 @@ export class ProductReadNovoDataSource extends DataSource<ProductReadNovoItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: ProductReadNovoItem[]) {
+  private getPagedData(data: Product[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -86,7 +81,7 @@ export class ProductReadNovoDataSource extends DataSource<ProductReadNovoItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: ProductReadNovoItem[]) {
+  private getSortedData(data: Product[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
