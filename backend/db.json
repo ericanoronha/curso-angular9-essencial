@@ -19,6 +19,16 @@
       "name": "Geladeira",
       "price": 2500.99,
       "id": 4
+    },
+    {
+      "name": "Lápis grafite 6B madeira reciclável",
+      "price": "2.56",
+      "id": 5
+    },
+    {
+      "name": "Mouse sem fio HP",
+      "price": 56.23,
+      "id": 6
     }
   ]
 }
