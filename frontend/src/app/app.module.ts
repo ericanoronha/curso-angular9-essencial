@@ -18,6 +18,8 @@ import { ForDirective } from "./directives/for.directive";
 import { ProductCreateComponent } from "./components/product/product-create/product-create.component";
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductReadNovoComponent } from './components/product/product-read-novo/product-read-novo.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
@@ -30,7 +32,6 @@ import { MatInputModule } from "@angular/material/input";
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 registerLocaleData(localePt);
 
@@ -48,6 +49,7 @@ registerLocaleData(localePt);
     ProductReadComponent,
     ProductReadNovoComponent,
     ProductUpdateComponent,
+    ProductDeleteComponent,
   ],
   imports: [
     BrowserModule,
